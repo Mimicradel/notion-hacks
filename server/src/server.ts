@@ -43,6 +43,7 @@ const server = http.createServer(async (req, res) => {
       // We map over the complex shape of the results and return a nice clean array of
       // objects in the shape of our `ThingToLearn` interface
       const list: ThingToLearn[] = query.results.map((row) => {
+        console.log(row);
         // row represents a row in our database and the name of the column is the
         // way to reference the data in that column
         const labelCell = row.properties.label;
